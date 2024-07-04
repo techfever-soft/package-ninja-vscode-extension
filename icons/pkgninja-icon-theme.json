@@ -1,0 +1,13 @@
+{
+    "iconDefinitions": {
+      "pkgninja-icon": {
+        "iconPath": "./pkgninja.svg"
+      }
+    },
+    "fileExtensions": {
+      "pkgninja": "pkgninja-icon"
+    },
+    "fileNames": {
+      ".pkgninja": "pkgninja-icon"
+    }
+  }

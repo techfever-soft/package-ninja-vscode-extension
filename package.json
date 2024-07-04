@@ -1,0 +1,87 @@
+{
+  "name": "packageninja-extension",
+  "displayName": "PackageNinja",
+  "description": "A VSCode extension for supporting the PackageNinja file.",
+  "version": "0.1.0",
+  "icon": "icons/extension-icon.png",
+  "engines": {
+    "vscode": "^1.90.2"
+  },
+  "categories": [
+    "Languages",
+    "Other"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pkgninja",
+        "aliases": [
+          "PKGNinja",
+          "pkgninja"
+        ],
+        "extensions": [
+          ".pkgninja"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pkgninja",
+        "scopeName": "source.pkgninja",
+        "path": "./syntaxes/pkgninja.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "PKGNinja",
+        "uiTheme": "vs-dark",
+        "path": "./themes/PKGNinja-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "pkgninja-icons",
+        "label": "PKGNinja Icons",
+        "path": "./icons/pkgninja-icon-theme.json"
+      }
+    ],
+    "fileIcons": [
+      {
+        "icon": "./images/pkgninja-icon.png",
+        "priority": 10,
+        "extensions": [
+          ".pkgninja"
+        ]
+      }
+    ]
+  },
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vsce:package": "vsce package",
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.90.2",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0"
+  }
+}

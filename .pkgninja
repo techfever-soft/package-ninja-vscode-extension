@@ -1,0 +1,53 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@types/vscode": {
+      "version": "^1.90.2",
+      "locked": false
+    },
+    "@types/mocha": {
+      "version": "^10.0.7",
+      "locked": false
+    },
+    "@types/node": {
+      "version": "20.x",
+      "locked": false
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "version": "^7.14.1",
+      "locked": false
+    },
+    "@typescript-eslint/parser": {
+      "version": "^7.11.0",
+      "locked": false
+    },
+    "eslint": {
+      "version": "^8.57.0",
+      "locked": false
+    },
+    "typescript": {
+      "version": "^5.4.5",
+      "locked": false
+    },
+    "ts-loader": {
+      "version": "^9.5.1",
+      "locked": false
+    },
+    "webpack": {
+      "version": "^5.92.1",
+      "locked": false
+    },
+    "webpack-cli": {
+      "version": "^5.1.4",
+      "locked": false
+    },
+    "@vscode/test-cli": {
+      "version": "^0.0.9",
+      "locked": false
+    },
+    "@vscode/test-electron": {
+      "version": "^2.4.0",
+      "locked": false
+    }
+  }
+}

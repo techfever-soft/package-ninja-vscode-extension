@@ -1,0 +1,50 @@
+{
+    "scopeName": "source.pkgninja",
+    "patterns": [
+      {
+        "include": "#comments"
+      },
+      {
+        "include": "#keys"
+      },
+      {
+        "include": "#values"
+      }
+    ],
+    "repository": {
+      "comments": {
+        "patterns": [
+          {
+            "name": "comment.line.double-slash.pkgninja",
+            "match": "//.*$"
+          },
+          {
+            "name": "comment.block.pkgninja",
+            "begin": "/\\*",
+            "end": "\\*/"
+          }
+        ]
+      },
+      "keys": {
+        "patterns": [
+          {
+            "name": "entity.name.tag.pkgninja",
+            "match": "\"[^\"]*\"(?=\\s*:\\s*)"
+          }
+        ]
+      },
+      "values": {
+        "patterns": [
+          {
+            "name": "string.quoted.double.pkgninja",
+            "match": "\"[^\"]*\""
+          },
+          {
+            "name": "constant.numeric.pkgninja",
+            "match": "\\b\\d+\\b"
+          }
+        ]
+      }
+    }
+  }
+  
